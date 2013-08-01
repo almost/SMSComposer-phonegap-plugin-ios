@@ -1,3 +1,5 @@
+Cordova 2.8.15 support added August 2013 - @almost
+
 Cordova 2.2.0 functionality check Nov 13 2012 - @RandyMcMillan
 
 Cordova 1.5.0 support added March 29 2012 - @RandyMcMillan
@@ -30,7 +32,7 @@ Using this plugin requires [PhoneGap for iPhone](http://github.com/phonegap/phon
 ### 201101112 ###
 * Initial release
 * Adds SMS text message composition in-app.
-* Requires iOS 4.0 or higher. 
+* Requires iOS 4.0 or higher.
   Attempts to compose SMS text without running 4.0+ fails gracefully with a friendly message.
 
 ## EXAMPLE USAGE ##
@@ -46,7 +48,7 @@ Using this plugin requires [PhoneGap for iPhone](http://github.com/phonegap/phon
 	`window.plugins.smsComposer.showSMSComposer('3424221122,2134463330', 'hello');`
 
 
-* `showSMSComposerWithCB` takes a callback as its first parameter.  
+* `showSMSComposerWithCB` takes a callback as its first parameter.
 * 0, 1, 2, or 3 will be passed to the callback when the text message has been attempted.
 
 ```javascript
@@ -59,10 +61,10 @@ Using this plugin requires [PhoneGap for iPhone](http://github.com/phonegap/phon
 		else if(result == 2)
 			alert("Failed.");
 		else if(result == 3)
-			alert("Not Sent.");		
+			alert("Not Sent.");
 
 	},'3424221122,2134463330', 'hello');
 ````````
 
-* A fully working example as index.html has been added to this repository. 
+* A fully working example as index.html has been added to this repository.
 * It is an example of what your www/index.html could look like.
