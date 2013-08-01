@@ -22,16 +22,14 @@
 	if (messageClass != nil) {
 		if (![messageClass canSendText]) {
 			UIAlertView *alert = [[UIAlertView alloc]	initWithTitle	:@"Notice" message:@"SMS Text not available."
-														delegate		:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                          delegate		:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
 			[alert show];
-			[alert release];
 			return;
 		}
 	} else {
 		UIAlertView *alert = [[UIAlertView alloc]	initWithTitle	:@"Notice" message:@"SMS Text not available."
-													delegate		:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                      delegate		:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
 		[alert show];
-		[alert release];
 		return;
 	}
 
@@ -52,7 +50,6 @@
 
 	[self.viewController presentModalViewController:picker animated:YES];
 	[[UIApplication sharedApplication] setStatusBarHidden:YES];	// /This hides the statusbar when the picker is presented -@RandyMcMillan
-	[picker release];
 }
 
 // Dismisses the composition interface when users tap Cancel or Send. Proceeds to update the message field with the result of the operation.
@@ -83,7 +80,6 @@
 
 	NSString *jsString = [[NSString alloc] initWithFormat:@"window.plugins.smsComposer._didFinishWithResult(%d);", webviewResult];
 	[self writeJavascript:jsString];
-	[jsString release];
 }
 
 @end
