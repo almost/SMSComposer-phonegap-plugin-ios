@@ -1,3 +1,5 @@
+Cordova 3.0.0 support added 14 August 2013 - @almost
+
 Cordova 2.8.15 support added August 2013 - @almost
 
 Cordova 2.2.0 functionality check Nov 13 2012 - @RandyMcMillan

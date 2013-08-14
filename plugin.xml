@@ -15,7 +15,7 @@
   <asset src="SMSComposer.js" target="SMSComposer.js" />
 
   <engines>
-    <engine name="cordova" version=">=2.0.0" />
+    <engine name="cordova" version=">=3.0.0" />
   </engines>
 
   <!-- ios -->
@@ -24,8 +24,10 @@
     <plugins-plist key="SMSComposer" string="SMSComposer" />
 
     <!-- Cordova >= 2.3 -->
-    <config-file target="config.xml" parent="plugins">
-      <plugin name="SMSComposer" value="SMSComposer"/>
+    <config-file target="config.xml"  parent="/*">
+      <feature name="SMSComposer">
+        <param name="ios-package" value="SMSComposer" />
+      </feature>
     </config-file>
 
     <source-file src="ios/SMSComposer.m" />
