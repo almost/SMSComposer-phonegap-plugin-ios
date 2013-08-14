@@ -15,7 +15,7 @@
 	return self;
 }
 
-- (void)showSMSComposer:(NSArray *)arguments withDict:(NSDictionary *)options
+- (void)showSMSComposer:(CDVInvokedUrlCommand*)command
 {
 	Class messageClass = (NSClassFromString(@"MFMessageComposeViewController"));
 
@@ -33,15 +33,16 @@
 		return;
 	}
 
-	NSString	*body = [options valueForKey:@"body"];
-	NSString	*toRecipientsString = [options valueForKey:@"toRecipients"];
+	NSString	*toRecipientsString = [command.arguments objectAtIndex:0];
+	NSString	*body = [command.arguments objectAtIndex:1];
+
 
 	MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
 
 	picker.messageComposeDelegate = self;
 
 	if (body != nil) {
-		picker.body = [options valueForKey:@"body"];
+		picker.body = body;
 	}
 
 	if (toRecipientsString != nil) {
