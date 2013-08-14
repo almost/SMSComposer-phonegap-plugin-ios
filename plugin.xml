@@ -20,6 +20,8 @@
 
   <!-- ios -->
   <platform name="ios">
+    <framework src="MessageUI.framework"/>
+               
     <!-- Cordova < 2.3 -->
     <plugins-plist key="SMSComposer" string="SMSComposer" />
 

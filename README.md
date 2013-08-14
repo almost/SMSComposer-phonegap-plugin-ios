@@ -27,6 +27,10 @@ Using this plugin requires [PhoneGap for iPhone](http://github.com/phonegap/phon
 
 ## RELEASE NOTES ##
 
+### 20130814 ###
+
+* Support for Cordova 3.0.0
+
 ### 20130801 ###
 
 * Support for Cordova 2.8.15
