@@ -18,6 +18,9 @@
 - (void)showSMSComposer:(CDVInvokedUrlCommand*)command
 {
 	Class messageClass = (NSClassFromString(@"MFMessageComposeViewController"));
+        
+	NSString	*toRecipientsString = [command.arguments objectAtIndex:0];
+	NSString	*body = [command.arguments objectAtIndex:1];
 
 	if (messageClass != nil) {
 		if (![messageClass canSendText]) {
@@ -33,8 +36,6 @@
 		return;
 	}
 
-	NSString	*toRecipientsString = [command.arguments objectAtIndex:0];
-	NSString	*body = [command.arguments objectAtIndex:1];
 
 
 	MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
